@@ -29,53 +29,55 @@ Code intentionally simple rakha gaya hai. Important jagahon par **Roman Urdu com
 
 ## 📁 Repository Structure
 
+File names jaan-bujh kar **short aur simple** rakhe gaye hain. Folder dekh kar topic samajh aa jayega, aur file name dekh kar program ka kaam.
+
 ```text
 C/
 │
 ├── 01-loops/
-│   ├── factorial_while.c
-│   ├── odd_numbers_reverse.c
-│   └── sum_with_loops.c
+│   ├── factorial.c
+│   ├── odd_reverse.c
+│   └── loop_sum.c
 │
 ├── 02-patterns/
-│   ├── pattern_decreasing_for.c
-│   ├── pattern_increasing_do_while.c
-│   ├── pattern_increasing_for.c
-│   ├── pattern_increasing_while.c
-│   └── square_star_pattern.c
+│   ├── decreasing.c
+│   ├── increasing_do.c
+│   ├── increasing_for.c
+│   ├── increasing_while.c
+│   └── square.c
 │
 ├── 03-arrays/
 │   ├── 1d/
-│   │   ├── array_input.c
-│   │   ├── array_max.c
-│   │   ├── array_min.c
-│   │   ├── array_reverse.c
-│   │   ├── array_reverse_steps.c
-│   │   ├── array_sum.c
-│   │   └── array_traversal.c
+│   │   ├── input.c
+│   │   ├── max.c
+│   │   ├── min.c
+│   │   ├── reverse.c
+│   │   ├── reverse_steps.c
+│   │   ├── sum.c
+│   │   └── traverse.c
 │   │
 │   └── 2d/
-│       ├── array_2d_diagonal_sum.c
-│       ├── array_2d_display.c
-│       ├── array_2d_display_fixed.c
-│       ├── array_2d_input.c
-│       ├── array_2d_max.c
-│       ├── array_2d_min.c
-│       ├── array_2d_search.c
-│       ├── array_2d_sum.c
-│       └── array_2d_transpose.c
+│       ├── diagonal_sum.c
+│       ├── display.c
+│       ├── grid_3x3.c
+│       ├── input.c
+│       ├── max.c
+│       ├── min.c
+│       ├── search.c
+│       ├── sum.c
+│       └── transpose.c
 │
 ├── 04-pointers/
-│   ├── pointer_basic.c
-│   ├── pointer_double.c
-│   └── pointer_reverse.c
+│   ├── basic.c
+│   ├── double.c
+│   └── reverse.c
 │
 ├── 05-strings/
-│   └── string_input_basic.c
+│   └── input.c
 │
 └── 06-swap/
-    ├── swap.c
-    └── swap_array_six.c
+    ├── basic.c
+    └── array.c
 ```
 
 ---
@@ -86,12 +88,14 @@ C/
 - `for`
 - `while`
 - `do-while`
-- Loop-based calculations
+- Factorial
+- Odd numbers in reverse
+- Sum using different loops
 
 ### Patterns
 - Increasing patterns
 - Decreasing patterns
-- Square/star patterns
+- Square/star pattern
 - Nested loops
 
 ### 1D Arrays
@@ -100,11 +104,12 @@ C/
 - Sum
 - Minimum / maximum
 - Reverse
-- Step-by-step array operations
+- Reverse with step-by-step output
 
 ### 2D Arrays
 - Matrix/grid input
 - Display
+- 3×3 grid
 - Sum
 - Minimum / maximum
 - Search
@@ -136,18 +141,18 @@ Har `.c` file ek independent practice program hai.
 ### Windows
 
 ```bash
-gcc 03-arrays/1d/array_sum.c -o array_sum.exe
-array_sum.exe
+gcc 03-arrays/1d/sum.c -o sum.exe
+sum.exe
 ```
 
 ### Linux / macOS
 
 ```bash
-gcc 03-arrays/1d/array_sum.c -o array_sum
-./array_sum
+gcc 03-arrays/1d/sum.c -o sum
+./sum
 ```
 
-Bas example ke taur par `array_sum.c` use kiya gaya hai. Kisi bhi file ka path de kar usay compile aur run kiya ja sakta hai.
+Bas example ke taur par `sum.c` use kiya gaya hai. Kisi bhi file ka path de kar usay compile aur run kiya ja sakta hai.
 
 ---
 
@@ -179,7 +184,7 @@ Agar purana code perfect nahi hai to bhi usay learning history ka part samjha ja
 
 ## 🧹 Repository Rules
 
-- Meaningful filenames use karne hain.
+- Short aur meaningful filenames use karne hain.
 - Related programs ko relevant folder mein rakhna hai.
 - Important logic par Roman Urdu comments add karne hain.
 - Compiled files (`.exe`, `.out`, `.o`) commit nahi karni.
