@@ -1,21 +1,20 @@
 #include <stdio.h>
 
-void reverse_Array(int* arr, int size) {
-  for (int i = 0; i < size / 2; i++) {
-    int temp = *(arr + i);
-    *(arr + i) = *(arr + size - 1 - i);
-    *(arr + size - 1 - i) = temp;
-  }
+void reverse_array(int *array, int size) {
+    // Pointer arithmetic ke zariye array ke elements ko reverse kar rahe hain.
+    for (int i = 0; i < size / 2; i++) {
+        int temp = *(array + i);
+        *(array + i) = *(array + size - 1 - i);
+        *(array + size - 1 - i) = temp;
+    }
 }
 
-int main() {
-  int arr[5] = {1, 2, 3, 4, 5};
-  int n = 5;
+int main(void) {
+    int array[5] = {1, 2, 3, 4, 5};
+    int size = 5;
+    reverse_array(array, size);
 
-  reverse_Array(arr, n);
-
-  for (int i = 0; i < 5; i++) {
-    printf("%d ", arr[i]);
-  }
-  return 0;
+    for (int i = 0; i < size; i++) printf("%d ", array[i]);
+    printf("\n");
+    return 0;
 }
