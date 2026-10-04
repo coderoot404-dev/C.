@@ -1,15 +1,19 @@
 #include <stdio.h>
 
-int main() {
-    int age = 22; // Aam variable
-    int *ptr = &age; // Pointer variable jo 'age' ka address store kar raha hai
+int main(void) {
+    int age = 22;
+    // Pointer variable age ka memory address store karta hai.
+    int *ptr = &age;
 
     printf("Age ki value: %d\n", age);
-    printf("Age ka memory address: %p\n", &age); // %p address print karne ke liye hota hai
-    printf("Pointer ke andar kya hai (Address): %p\n", ptr);
-    printf("Pointer ke zariye value nikalna (Dereference): %d\n", *ptr);
+    printf("Age ka memory address: %p\n", (void *)&age);
+    printf("Pointer mein stored address: %p\n", (void *)ptr);
 
-    *ptr = 55; // Pointer ke zariye value change karna
+    // *ptr ko dereference karne se us address par stored value milti hai.
+    printf("Pointer ke zariye age: %d\n", *ptr);
+
+    // Pointer ke zariye original variable ki value change kar rahe hain.
+    *ptr = 55;
     printf("Age ki nayi value: %d\n", age);
     return 0;
 }
