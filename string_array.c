@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-  char city[50];
+int main(void) {
+    char city[50];
+    printf("Apni favorite city enter karein: ");
+    // fgets spaces ke saath poori string input kar sakta hai.
+    fgets(city, sizeof(city), stdin);
 
-  printf("Enter your favorite city name: ");
-  fgets(city, sizeof(city), stdin);
-
-  city[strcspn(city, "\n")] = '\0';
-
-  printf("Thanks your favorite city  name is: %s\n", city);
-  return 0;
+    // fgets aksar newline save karta hai; yahan usay remove kar rahe hain.
+    city[strcspn(city, "\n")] = '\0';
+    printf("Aap ki favorite city: %s\n", city);
+    return 0;
 }
