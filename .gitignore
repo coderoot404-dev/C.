@@ -1,9 +1,0 @@
-# C compiler ki generated files
-*.exe
-*.out
-*.o
-
-# Temporary/editor files
-tempCodeRunnerFile.c
-.vscode/
-.idea/
