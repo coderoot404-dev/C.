@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
+int main(void) {
     char name[40];
-
-    printf("Enter your name: ");
+    printf("Apna naam enter karein: ");
     fgets(name, sizeof(name), stdin);
 
+    // Input ke end mein aane wali newline ko string se remove kar rahe hain.
     name[strcspn(name, "\n")] = '\0';
-
-    printf("Your name is: %s\n",name);
-    printf("Your name length is: %zu\n", strlen(name));
+    printf("Aap ka naam: %s\n", name);
+    printf("Naam ki length: %zu\n", strlen(name));
     return 0;
 }
