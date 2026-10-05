@@ -2,9 +2,9 @@
 
 > **Meri C programming learning journey — practice, mistakes, concepts aur progress.**
 
-Ye repository meri **C programming practice** ka record hai. Yahan main jo concepts seekhta hoon, unke chhote programs likhta hoon taake sirf theory na parhoon balki khud **code → run → samjho → dobara practice** karoon.
+Ye repository meri **C programming practice** ka record hai. Yahan main concepts ko chhote programs se practice karta hoon taake sirf theory na parhoon balki **code → run → samjho → mistake fix karo → dobara practice** karoon.
 
-Code intentionally simple rakha gaya hai. Important jagahon par **Roman Urdu comments** bhi hain taake kuch time baad jab main purana code dekhoon to mujhe dobara samajhne mein mushkil na ho.
+Code intentionally simple rakha gaya hai. Important jagahon par **Roman Urdu comments** hain taake baad mein purana code jaldi samajh aa jaye.
 
 ---
 
@@ -18,18 +18,18 @@ Code intentionally simple rakha gaya hai. Important jagahon par **Roman Urdu com
 | 04 | Pointers | 🟢 Practice |
 | 05 | Strings | 🟢 Practice |
 | 06 | Swapping | 🟢 Practice |
-| 07 | Functions | 🔜 Next |
+| 07 | Functions | 🟢 Started |
 | 08 | Structures | 🔜 Next |
 | 09 | File Handling | 🔜 Next |
 | 10 | Dynamic Memory | 🔜 Next |
 
-> **Note:** Status ka matlab ye nahi ke topic 100% complete hai. Ye sirf meri current practice/progress ko show karta hai.
+> Status ka matlab 100% completion nahi; ye current practice progress ko show karta hai.
 
 ---
 
 ## 📁 Repository Structure
 
-File names jaan-bujh kar **short aur simple** rakhe gaye hain. Folder dekh kar topic samajh aa jayega, aur file name dekh kar program ka kaam.
+File names jaan-bujh kar **short aur simple** rakhe gaye hain. Folder se topic aur file name se program ka kaam samajh aa jata hai.
 
 ```text
 C/
@@ -37,7 +37,10 @@ C/
 ├── 01-loops/
 │   ├── factorial.c
 │   ├── odd_reverse.c
-│   └── loop_sum.c
+│   ├── loop_sum.c
+│   ├── even_numbers.c
+│   ├── sum_even.c
+│   └── multiplication_table.c
 │
 ├── 02-patterns/
 │   ├── decreasing.c
@@ -51,20 +54,28 @@ C/
 │   │   ├── input.c
 │   │   ├── max.c
 │   │   ├── min.c
+│   │   ├── sum.c
+│   │   ├── average.c
+│   │   ├── sizeof.c
+│   │   ├── search.c
+│   │   ├── second_largest.c
 │   │   ├── reverse.c
 │   │   ├── reverse_steps.c
-│   │   ├── sum.c
+│   │   ├── bubble_sort_steps.c
 │   │   └── traverse.c
 │   │
 │   └── 2d/
-│       ├── diagonal_sum.c
+│       ├── input.c
+│       ├── grid_input.c
+│       ├── grid_functions.c
+│       ├── grid_input_functions.c
 │       ├── display.c
 │       ├── grid_3x3.c
-│       ├── input.c
+│       ├── sum.c
 │       ├── max.c
 │       ├── min.c
 │       ├── search.c
-│       ├── sum.c
+│       ├── diagonal_sum.c
 │       └── transpose.c
 │
 ├── 04-pointers/
@@ -73,11 +84,19 @@ C/
 │   └── reverse.c
 │
 ├── 05-strings/
-│   └── input.c
+│   ├── input.c
+│   ├── reverse.c
+│   └── name_city.c
 │
-└── 06-swap/
-    ├── basic.c
-    └── array.c
+├── 06-swap/
+│   ├── basic.c
+│   └── array.c
+│
+└── 07-functions/
+    ├── cube.c
+    ├── table.c
+    ├── global_scope.c
+    └── number_guess.c
 ```
 
 ---
@@ -85,34 +104,32 @@ C/
 ## 🧩 Concepts Practiced
 
 ### Loops
-- `for`
-- `while`
-- `do-while`
+- `for`, `while`, `do-while`
 - Factorial
-- Odd numbers in reverse
-- Sum using different loops
+- Odd/even numbers
+- Even numbers ka sum
+- Multiplication table
 
 ### Patterns
-- Increasing patterns
-- Decreasing patterns
-- Square/star pattern
+- Increasing/decreasing patterns
+- Square/star patterns
 - Nested loops
 
 ### 1D Arrays
-- Input
-- Traversal
-- Sum
+- Input, traversal, sum
 - Minimum / maximum
+- Average
+- `sizeof` se array length
+- Linear search
 - Reverse
-- Reverse with step-by-step output
+- Second largest
+- Bubble sort
 
 ### 2D Arrays
 - Matrix/grid input
-- Display
-- 3×3 grid
-- Sum
-- Minimum / maximum
-- Search
+- Nested loops
+- Functions mein 2D array pass karna
+- Sum, min/max, search
 - Diagonal sum
 - Transpose
 
@@ -124,13 +141,19 @@ C/
 - Passing addresses to functions
 
 ### Strings
-- Basic string input
+- Basic input
 - Character arrays
-- String length / input handling
+- `fgets`
+- Newline removal
+- String reverse
 
-### Swapping
-- Swapping variables using pointers
-- Array element swapping
+### Functions
+- Function declaration/definition
+- Parameters
+- Return values
+- `void` functions
+- Global scope
+- Helper functions
 
 ---
 
@@ -152,15 +175,11 @@ gcc 03-arrays/1d/sum.c -o sum
 ./sum
 ```
 
-Bas example ke taur par `sum.c` use kiya gaya hai. Kisi bhi file ka path de kar usay compile aur run kiya ja sakta hai.
+Kisi bhi file ka path de kar usay compile aur run kiya ja sakta hai.
 
 ---
 
 ## 📝 My Learning Style
-
-Main is repository mein code ko unnecessarily complicated nahi rakhta.
-
-Mera focus hai:
 
 ```text
 Learn
@@ -178,39 +197,32 @@ Practice Again
 Move to Next Concept
 ```
 
-Agar purana code perfect nahi hai to bhi usay learning history ka part samjha jata hai. Har program ka purpose **seekhna** hai, production-level software banana nahi.
+Ye production-level software repository nahi hai. Iska main purpose **C fundamentals ko genuinely samajhna aur practice history maintain karna** hai.
 
 ---
 
 ## 🧹 Repository Rules
 
-- Short aur meaningful filenames use karne hain.
-- Related programs ko relevant folder mein rakhna hai.
-- Important logic par Roman Urdu comments add karne hain.
-- Compiled files (`.exe`, `.out`, `.o`) commit nahi karni.
-- Temporary editor files commit nahi karni.
-- Naya concept aaye to uske liye proper folder/file naming maintain karni hai.
+- Short aur meaningful filenames.
+- Related programs ko relevant folder mein rakhna.
+- Important logic par Roman Urdu comments.
+- `.exe`, `.out`, `.o` aur temporary editor files commit nahi karni.
+- Duplicate practice ko unnecessarily repeat nahi karna.
+- Naya concept aaye to proper folder/file naming maintain karni.
 
 ---
 
 ## 🚀 What's Next?
 
-Aage ja kar is repository mein gradually ye concepts add karne hain:
+Aage gradually:
 
-- Functions
+- More functions practice
 - Recursion
-- Structures
-- Unions
+- Structures / unions
 - Dynamic memory allocation
 - File handling
 - More pointer practice
 - More array/string problems
 - Small C projects
 
-**Goal:** C ko sirf dekh kar nahi, balki khud code likh kar genuinely samajhna. 💻
-
----
-
-### ⭐ One step at a time
-
-> **Small programs today → strong C fundamentals tomorrow.**
+> **Small programs today → strong C fundamentals tomorrow.** 💻
