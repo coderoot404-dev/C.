@@ -532,6 +532,7 @@ C.
 ├── 03-arrays/
 │   ├── 1d/
 │   │   ├── average.c
+│   │   ├── binary_search.c
 │   │   ├── bubble_sort_steps.c
 │   │   ├── input.c
 │   │   ├── max.c
@@ -540,6 +541,7 @@ C.
 │   │   ├── reverse_steps.c
 │   │   ├── search.c
 │   │   ├── second_largest.c
+│   │   ├── selection_sort.c
 │   │   ├── sizeof.c
 │   │   ├── sum.c
 │   │   └── traverse.c
@@ -565,28 +567,30 @@ C.
 │
 ├── 05-strings/
 │   ├── input.c
+│   ├── length.c
 │   ├── name_city.c
+│   ├── palindrome.c
 │   └── reverse.c
 │
 ├── 06-swap/
 │   ├── array.c
 │   └── basic.c
 │
-└── 07-functions/
-    ├── cube.c
-    ├── global_scope.c
-    ├── number_guess.c
-    ├── parameters.c
-    ├── pass_by_value.c
-    ├── pointer_function.c
-    ├── prototype.c
-    └── table.c
-
-practice/
-└── README.md
-
-mini-projects/
-└── README.md
+├── 07-functions/
+│   ├── cube.c
+│   ├── global_scope.c
+│   ├── number_guess.c
+│   ├── parameters.c
+│   ├── pass_by_value.c
+│   ├── pointer_function.c
+│   ├── prototype.c
+│   └── table.c
+│
+├── mini-projects/
+│   └── README.md
+│
+└── practice/
+    └── README.md
 ```
 
 ### Folder ka matlab ek line mein
