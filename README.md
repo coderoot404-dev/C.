@@ -20,6 +20,8 @@ Is repo ka purpose sirf code store karna nahi hai. Har folder aur har `.c` file 
 | Strings revise karni hain | `05-strings/` |
 | Swapping revise karni hai | `06-swap/` |
 | Functions revise karne hain | `07-functions/` |
+| Practice problems karne hain | `practice/` |
+| Mini projects ke ideas dekhne hain | `mini-projects/` |
 | C ka complete learning order dekhna hai | [Learning Path](#-learning-path) |
 | Kisi specific concept ki file dhoondni hai | [Revision Map](#-revision-map) |
 | Puri repo ki structure dekhni hai | [Complete Repository Tree](#-complete-repository-tree) |
@@ -141,6 +143,8 @@ Arrays ko do clear parts mein rakha gaya hai:
 | `reverse.c` | Array ko reverse order mein display karti hai | Reverse indexing |
 | `reverse_steps.c` | Array ko swap karke reverse karti hai aur steps show karti hai | In-place swapping |
 | `bubble_sort_steps.c` | Bubble sort ke passes show karti hai | Sorting + nested loops |
+| `selection_sort.c` | Selection sort se array sort karti hai | Sorting + minimum selection |
+| `binary_search.c` | Sorted array mein binary search karti hai | Divide-and-search logic |
 
 ### 1D Array revision order
 
@@ -167,6 +171,20 @@ bubble_sort_steps
 ```
 
 **Main concepts:** index, traversal, array length, comparison, searching, reversing, sorting.
+
+### Searching + sorting progression
+
+```text
+Linear Search
+    ↓
+Bubble Sort
+    ↓
+Selection Sort
+    ↓
+Binary Search
+```
+
+**Important:** Binary search se pehle sorted array ka concept clear hona chahiye.
 
 ---
 
@@ -252,6 +270,8 @@ C mein string basically **characters ka array** hoti hai jo `\\0` null terminato
 | `input.c` | Naam input karti hai | Character array + `fgets` |
 | `reverse.c` | String reverse karti hai | Indexing + `strlen` + swapping |
 | `name_city.c` | Name aur city input karti hai | Multiple strings + `fgets` |
+| `length.c` | String ki length show karti hai | `strlen` + null terminator |
+| `palindrome.c` | Word palindrome hai ya nahi check karti hai | String comparison + two indexes |
 
 ### Important string tools
 
@@ -261,7 +281,25 @@ C mein string basically **characters ka array** hoti hai jo `\\0` null terminato
 - `strcspn()`
 - Null terminator: `\\0`
 
-**Revision order:** `input.c` → `name_city.c` → `reverse.c`.
+**Revision order:** `input.c` → `name_city.c` → `length.c` → `reverse.c` → `palindrome.c`.
+
+### String progression
+
+```text
+Input
+  ↓
+Length
+  ↓
+Indexing
+  ↓
+Reverse
+  ↓
+Palindrome
+  ↓
+Compare / Search / Count
+```
+
+**Practice:** `practice/README.md` mein string challenges solve karo.
 
 ---
 
@@ -300,6 +338,10 @@ Ye section functions ko reusable building blocks ki tarah samajhne ke liye hai.
 | `table.c` | Function se multiplication table print karti hai | `void` + parameter |
 | `global_scope.c` | Global variable ko multiple functions mein use karti hai | Scope |
 | `number_guess.c` | Guess ko actual number ke saath compare karti hai | Helper function + conditions |
+| `parameters.c` | Do parameters lekar sum return karti hai | Multiple parameters |
+| `prototype.c` | Function prototype ka example | Declaration + definition |
+| `pass_by_value.c` | Value copy ke behavior ko show karti hai | Pass by value |
+| `pointer_function.c` | Pointer parameter se original value change karti hai | Pointer + function |
 
 ### Function mental model
 
@@ -317,7 +359,29 @@ function logic
 return value / output
 ```
 
-**Revision order:** `cube.c` → `table.c` → `number_guess.c` → `global_scope.c`.
+**Revision order:** `cube.c` → `parameters.c` → `prototype.c` → `table.c` → `pass_by_value.c` → `pointer_function.c` → `number_guess.c` → `global_scope.c`.
+
+### Function progression
+
+```text
+Function call
+    ↓
+Parameters
+    ↓
+Return value
+    ↓
+Prototype
+    ↓
+Pass by value
+    ↓
+Pointer parameter
+    ↓
+Multiple functions / larger programs
+    ↓
+Recursion
+```
+
+**Important:** `pass_by_value.c` aur `pointer_function.c` ko saath compare karna — yahan se functions + pointers ka connection clear hota hai.
 
 ---
 
@@ -354,6 +418,16 @@ return value / output
 | `void` function | `07-functions/table.c` | `number_guess.c` |
 | Scope | `07-functions/global_scope.c` | — |
 | Helper function | `07-functions/number_guess.c` | — |
+| Multiple parameters | `07-functions/parameters.c` | `cube.c` |
+| Function prototype | `07-functions/prototype.c` | `parameters.c` |
+| Pass by value | `07-functions/pass_by_value.c` | `pointer_function.c` |
+| Pointer parameter | `07-functions/pointer_function.c` | `06-swap/basic.c` |
+| Selection sort | `03-arrays/1d/selection_sort.c` | `bubble_sort_steps.c` |
+| Binary search | `03-arrays/1d/binary_search.c` | `search.c` |
+| String length | `05-strings/length.c` | `reverse.c` |
+| String palindrome | `05-strings/palindrome.c` | `reverse.c` |
+| Practice problems | `practice/README.md` | — |
+| Mini projects | `mini-projects/README.md` | — |
 
 ---
 
@@ -409,6 +483,8 @@ Pointers
 Strings
   ↓
 Functions
+  ↓
+Practice Problems
   ↓
 Recursion
   ↓
@@ -500,7 +576,17 @@ C.
     ├── cube.c
     ├── global_scope.c
     ├── number_guess.c
+    ├── parameters.c
+    ├── pass_by_value.c
+    ├── pointer_function.c
+    ├── prototype.c
     └── table.c
+
+practice/
+└── README.md
+
+mini-projects/
+└── README.md
 ```
 
 ### Folder ka matlab ek line mein
@@ -513,6 +599,8 @@ C.
 05-strings    → character arrays + strings
 06-swap       → swapping techniques
 07-functions  → reusable functions
+practice       → problem solving challenges
+mini-projects  → small project roadmap
 ```
 
 ---
@@ -579,6 +667,9 @@ Repo ko clean aur useful rakhne ke liye:
 - Ek concept ke multiple versions hon to unka purpose clear hona chahiye.
 - Code ko unnecessarily complicated nahi banana.
 - New topic aaye to numbered folder structure maintain karna.
+- Practice problems ko learning code se separate rakhna.
+- Mini projects ko concept folders se separate rakhna.
+- Naye concept ko sirf README mein mark na karo — jab practice ho tab actual code bhi add karo.
 - README ko new topics/files ke saath update karna.
 - Learning repo hai, is liye experiments aur mistakes ko learning ka part samajhna.
 
@@ -586,7 +677,15 @@ Repo ko clean aur useful rakhne ke liye:
 
 # 🚀 What's Next?
 
-Current roadmap:
+### Abhi sabse useful next steps
+
+1. `07-functions/` ke naye examples revise karo.
+2. `practice/README.md` se problems **bina solution dekhe** solve karo.
+3. Recursion start karo.
+4. Phir Structures par move karo.
+5. Baad mein mini projects ko actual `.c` programs mein convert karo.
+
+### Current roadmap
 
 - More Functions
 - Recursion
